@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    width: 300px; /* Ajusta el ancho según necesidad */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group, .form-group-inline {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-inline {
+    flex-direction: row; /* Coloca la etiqueta y el input en la misma línea */
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta en grupos no-inline */
+}
+
+input, 
+input[type="email"], 
+input[type="password"] {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 0; /* Bordes cuadrados */
+    box-sizing: border-box; /* Asegura que el padding no incremente el ancho */
+}
+
+.form-group input {
+    width: 100%; /* El input ocupa todo el ancho disponible en su contenedor */
+}
+
