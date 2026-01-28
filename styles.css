@@ -47,7 +47,7 @@ textarea {
 /* Estilo específico para Nombre y Apellidos para que estén en la misma línea */
 .form-group:first-child {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .form-group:first-child input,
