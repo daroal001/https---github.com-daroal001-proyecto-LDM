@@ -9,12 +9,7 @@ form {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column; /* Apila etiquetas y entradas dentro del grupo */
-    margin-bottom: 15px;
+    background-color: #ccc;
 }
 
 label {
@@ -34,18 +29,6 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
 }
-
-/* Estilo específico para Nombre y Apellidos para que estén en la misma línea */
-.form-group:first-child {
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.form-group:first-child input,
-.form-group:first-child label {
-    width: 48%; /* Ajusta el ancho para que quepan en la misma línea */
-}
-
 button {
     padding: 10px 15px;
     background-color: #007bff;
@@ -54,6 +37,19 @@ button {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-login-container {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 100%; /* Ocupa toda la anchura de la ventana */
 }
 
 
