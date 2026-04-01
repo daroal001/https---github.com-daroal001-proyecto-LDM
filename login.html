@@ -6,57 +6,58 @@
     <title>login</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
-<body style="background-color: #587490;">
+<body>
 <main>
+        <!-- Formulario de registro con campos adicionales y validación -->
 <form action="/ruta-de-procesamiento" method="POST" autocomplete="on">
     <fieldset class="form-group-login-container">
         <legend>Formulario de Registro</legend>
         <!-- Sección de Nombre y Apellidos en la misma línea (ambos requeridos) -->
         <div class="form">
             <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Introduce tu nombre" required>
             <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos" required>
         </div>
 
         <!-- Campos individuales -->
         <div class="form">
             <label for="descripcion">Descripción/CV:</label>
-            <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+            <textarea id="descripcion" name="descripcion" rows="4" placeholder="Introduce una breve descripción o CV"></textarea>
         </div>
-        
+
         <div class="form">
             <label for="ubicacion">Ubicación:</label>
-            <input type="text" id="ubicacion" name="ubicacion" required> <!-- Requerido -->
+            <input type="text" id="ubicacion" name="ubicacion" placeholder="Introduce tu ubicación" required> <!-- Requerido -->
         </div>
         <!-- horario -->
         <div class="form">
             <label for="horario">Horario:</label>
-            <input type="text" id="horario" name="horario">
+            <input type="text" id="horario" name="horario" placeholder="Introduce tu horario">
         </div>
         <!-- salario -->
         <div class="form">
             <label for="salario">Salario:</label>
-            <input type="number" id="salario" name="salario" min="0" step="any">
+            <input type="number" id="salario" name="salario" min="0" step="any" placeholder="Introduce tu salario">
         </div>
 
         <!-- Teléfono -->
         <div class="form">
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,15}">
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,15}" placeholder="Introduce tu teléfono">
         </div>
 
         <div class="form">
             <label for="correo">Correo:</label>
-            <input type="email" id="correo" name="correo" required>
+            <input type="email" id="correo" name="correo" placeholder="Introduce tu correo" required>
         </div>
 
         <div class="form">
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required minlength="6">
+            <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required minlength="8">
         </div>
         <!-- Botón de envío -->
-        <button type="submit" aria-label="Enviar formulario de registro">Enviar</button>
+        <button type="submit" aria-label="Enviar formulario de registro">login</button>
     </fieldset>
 </form>
 </main>
