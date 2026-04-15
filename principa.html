@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f4f4f9;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #fff;
+            padding: 15px 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 120px 1fr 250px;
+            gap: 15px;
+            padding: 15px;
+            flex: 1;
+        }
+
+        .caja {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        h2, h3, p {
+            margin-top: 0;
+        }
+
+        button {
+            background: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>Mi Empresa</header>
+
+    <div class="grid-container">
+        <nav class="caja">
+            <a href="#">Inicio</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Ajustes</a>
+        </nav>
+
+        <main class="caja">
+            <h2>Panel Principal</h2>
+            <p>Gestiona tus tareas aquí.</p>
+            <button>Nueva Tarea</button>
+        </main>
+
+        <aside>
+            <div class="caja">
+                <h3>Mensajes</h3>
+                <p>Ana: ¿Informe listo?</p>
+            </div>
+            <div class="caja">
+                <h3>Valoraciones</h3>
+                <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>
