@@ -9,7 +9,7 @@ form {
     padding: 20px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #307acf;
+    background-color: #0befff;
 }
 
 label {
@@ -66,7 +66,7 @@ button:hover {
 
 .header  { grid-area: header; display: flex; align-items: center; border-bottom: 2px solid black; }
 .sidebar { grid-area: sidebar; border-right: 2px solid black; padding: 20px; }
-.main    { grid-area: main; padding: 40px; background-color: #307acf; }
+.main    { grid-area: main; padding: 40px; background-color: #0befff; }
 .footer  { grid-area: footer; border-top: 2px solid black; display: flex; align-items: center; justify-content: center; }
 /* Estilos internos del Header */
 .header {
