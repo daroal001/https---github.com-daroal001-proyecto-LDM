@@ -8,9 +8,9 @@ body { margin: 0;
  }
 .container {
     display: grid;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    grid-template-columns: 250px 1fr; /* Lateral fijo, resto flexible */
-    grid-template-rows: 80px 1fr 60px; /* Altura de header, contenido y footer */
+    height: 100vh;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 200px; /* Aumentamos el alto para el mapa */
     grid-template-areas: 
         "header header"
         "sidebar main"
@@ -35,12 +35,27 @@ body { margin: 0;
     width: auto;
 }
     
-.login { border: 1px solid black; padding: 10px;
- background-color: #3f25b2; /* Fondo oscuro similar a tu imagen */
- display: inline;
- header: 40px;
- width: 40px;
-  }
+.login { 
+    border: 2px solid black; /* Borde un poco más grueso para que combine con tus otros botones */
+    background-color: #3f25b2; /* Fondo oscuro */
+    padding: 8px 20px; /* Espaciado interno: 8px arriba/abajo, 20px a los lados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Unos bordes ligeramente redondeados (opcional) */
+    transition: background-color 0.3s; /* Transición suave para el efecto hover */
+}
+.login a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.login:hover {
+    background-color: #2a187a; /* Un morado un poco más oscuro */
+    cursor: pointer;
+}
 
 /* Estilo de la "Publicación de trabajo" (Card) */
 .card {
@@ -58,4 +73,21 @@ body { margin: 0;
     background: transparent;
     cursor: pointer;
     font-weight: bold;
+}
+
+.footer {
+    grid-area: footer;
+    border-top: 2px solid black;
+    background-color: #307acf; /* Color a juego con el header */
+    display: flex;
+    justify-content: space-around; /* Separa el texto del mapa */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.map-container iframe {
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 300px;
+    height: 150px;
 }
