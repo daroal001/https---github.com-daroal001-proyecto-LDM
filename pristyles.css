@@ -1,93 +1,162 @@
-/* Reset básico */
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+/* --- RESET BÁSICO --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif; 
+}
 
-body { margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #3f25b2; /* Fondo oscuro similar a tu imagen */
-    color: white;
- }
+body { 
+    margin: 0;
+    background-color: #f3f4f6; /* Gris muy claro, previene parpadeos de color */
+    color: #111827; /* Gris muy oscuro para los textos generales */
+}
+
+/* --- ESTRUCTURA GRID --- */
 .container {
     display: grid;
     height: 100vh;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: 80px 1fr 200px; /* Aumentamos el alto para el mapa */
+    /* Cambiamos el 200px por 150px al final de esta línea: */
+    grid-template-rows: 80px 1fr 150px; 
     grid-template-areas: 
         "header header"
         "sidebar main"
         "footer footer";
 }
-
-/* Asignación de áreas */
-.header  { grid-area: header; display: flex; align-items: center; border-bottom: 2px solid black; width: 100%; background-color: #307acf; }
-.sidebar { grid-area: sidebar; border-right: 2px solid black; padding: 20px; background-color: #307acf; }
-.main    { grid-area: main; padding: 40px; background-color: #3f25b2 ; }
-.footer  { grid-area: footer; border-top: 2px solid black; display: flex; align-items: center; justify-content: center; }
-
-/* Estilos internos del Header */
-.header {
-    display: flex;
+/* --- COLORES Y ÁREAS (Estilo Clásico Profesional) --- */
+.header { 
+    grid-area: header; 
+    background-color: #476bcc; /* Azul marino */
+    color: #ffffff; /* Texto blanco */
+    display: flex; 
     justify-content: space-between;
+    align-items: center; 
     padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra suave debajo del header */
+    z-index: 10; /* Asegura que la sombra se vea sobre el main */
 }
 
-.logo img {
-    height: 50px; /* Ajusta el tamaño de tu logo aquí */
+.sidebar { 
+    grid-area: sidebar; 
+    background-color: #1e3a8a; /* Azul marino */
+    color: #ffffff;
+    padding: 20px; 
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra a la derecha y abajo */
+    z-index: 5; /* Obliga a la sombra a proyectarse POR ENCIMA del footer y el main */
+}
+
+.main { 
+    grid-area: main; 
+    background-color: #f3f4f6; /* Gris muy claro para que destaquen las cards */
+    padding: 40px; 
+}
+
+.footer { 
+    grid-area: footer; 
+    background-color: #1e3a8a; /* Azul marino */
+    color: #ffffff;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 10px 20px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Una línea blanca casi transparente para marcar el límite */
+}
+
+/* --- ELEMENTOS DEL HEADER --- */
+.logo {
+    height: 50px; 
     width: auto;
 }
-    
+
+/* Botón Login adaptado (Borde blanco, fondo transparente) */
 .login { 
-    border: 2px solid black; /* Borde un poco más grueso para que combine con tus otros botones */
-    background-color: #3f25b2; /* Fondo oscuro */
-    padding: 8px 20px; /* Espaciado interno: 8px arriba/abajo, 20px a los lados */
+    border: 2px solid #ffffff; 
+    background-color: transparent; 
+    padding: 8px 20px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px; /* Unos bordes ligeramente redondeados (opcional) */
-    transition: background-color 0.3s; /* Transición suave para el efecto hover */
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
 }
+
 .login a {
-    color: white; /* Color del texto */
-    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #ffffff; 
+    text-decoration: none; 
     font-weight: bold;
     font-size: 16px;
+    transition: color 0.3s ease;
 }
 
+/* Efecto hover: se vuelve blanco con texto azul */
 .login:hover {
-    background-color: #2a187a; /* Un morado un poco más oscuro */
+    background-color: #ffffff; 
     cursor: pointer;
 }
+.login:hover a {
+    color: #1e3a8a; 
+}
 
-/* Estilo de la "Publicación de trabajo" (Card) */
+/* --- ELEMENTOS DEL SIDEBAR --- */
+.sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil para cada filtro */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Se ilumina al pasar el ratón */
+}
+
+/* --- ELEMENTOS DEL MAIN (Cards de Empleo) --- */
 .card {
-    border: 3px solid black;
-    padding: 20px;
+    background-color: #ffffff; /* Tarjeta blanca */
+    color: #111827; /* Texto oscuro */
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
-}
-
-.btn-contact {
-    border: 2px solid black;
-    padding: 10px 20px;
-    background: transparent;
-    cursor: pointer;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra elegante, sin borde negro */
     font-weight: bold;
 }
 
-.footer {
-    grid-area: footer;
-    border-top: 2px solid black;
-    background-color: #307acf; /* Color a juego con el header */
-    display: flex;
-    justify-content: space-around; /* Separa el texto del mapa */
-    align-items: center;
+/* Botón de la tarjeta */
+.btn-contact {
+    border: none;
     padding: 10px 20px;
+    background-color: #1e3a8a; /* Botón azul a juego con el diseño */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
+.btn-contact:hover {
+    background-color: #152b66; /* Azul un poco más oscuro al pasar el ratón */
+}
+
+/* --- ELEMENTOS DEL FOOTER --- */
 .map-container iframe {
-    border: 2px solid black;
-    border-radius: 8px;
+    border: none;
+    border-radius: 8px; /* Mapa con bordes redondeados */
     width: 300px;
-    height: 150px;
+    height: 100px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para que resalte sobre el azul */
 }
