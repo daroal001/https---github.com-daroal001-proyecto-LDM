@@ -1,5 +1,13 @@
 
 /* login */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif; 
+}
+
+
 form {
     display: flex;
     flex-direction: column; /* Apila los grupos de campos verticalmente */
@@ -21,6 +29,7 @@ input[type="number"],
 input[type="email"], 
 input[type="password"],
 input[type="tel"],
+
 textarea {
     width: 100%;
     padding: 8px;
@@ -28,6 +37,7 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
 }
+
 button {
     border: 2px solid black;
     padding: 10px 15px;
@@ -68,6 +78,7 @@ button:hover {
     align-items: center;
     background: #307acf;
 }
+
 .btn-contact {
     border: 2px solid black;
     padding: 10px 20px;
@@ -85,7 +96,7 @@ button:hover {
 
 body { 
     margin: 0;
-    background-color: #f3f4f6; /* Gris muy claro, previene parpadeos de color */
+    background-color: #3f67b7; /* Azul de fondo para toda la página */
     color: #111827; /* Gris muy oscuro para los textos generales */
 }
 
@@ -122,13 +133,6 @@ body {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra a la derecha y abajo */
     z-index: 5; /* Obliga a la sombra a proyectarse POR ENCIMA del footer y el main */
 }
-
-.main { 
-    grid-area: main; 
-    background-color: #f3f4f6; /* Gris muy claro para que destaquen las cards */
-    padding: 40px; 
-}
-
 .footer { 
     grid-area: footer; 
     background-color: #1e3a8a; /* Azul marino */
