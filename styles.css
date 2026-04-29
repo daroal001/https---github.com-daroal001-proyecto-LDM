@@ -7,6 +7,41 @@
     font-family: Arial, sans-serif; 
 }
 
+.login { 
+    border: 2px solid #ffffff; 
+    background-color: transparent; 
+    padding: 8px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+}
+
+.login a {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover: se vuelve blanco con texto azul */
+.login:hover {
+    background-color: #ffffff; 
+    cursor: pointer;
+}
+.login:hover a {
+    color: #1e3a8a; 
+}
+/* centrar el título del login en el nav */
+.login-nav-title {
+    color: #ffffff; 
+    font-size: 24px; 
+    font-weight: bold; 
+    text-align: center; 
+    flex-grow: 1; /* Esto hace que el título ocupe todo el espacio disponible */ 
+}
 
 form {
     display: flex;
@@ -89,13 +124,6 @@ button:hover {
     font-weight: bold;
 }
 
-* { 
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
-    font-family: Arial, sans-serif; 
-}
-
 body { 
     margin: 0;
     background-color: #3f67b7; /* Azul de fondo para toda la página */
@@ -155,23 +183,6 @@ body {
     justify-content: center;
     border-radius: 5px; 
     transition: all 0.3s ease; 
-}
-
-.login a {
-    color: #ffffff; 
-    text-decoration: none; 
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-/* Efecto hover: se vuelve blanco con texto azul */
-.login:hover {
-    background-color: #ffffff; 
-    cursor: pointer;
-}
-.login:hover a {
-    color: #1e3a8a; 
 }
 
 /* --- ELEMENTOS DEL SIDEBAR --- */
