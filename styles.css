@@ -68,7 +68,9 @@ button:hover {
     padding: 40px; 
 }
 
-.logo, .login { border: 1px solid black; padding: 10px; }
+.logo { height: 50px; width: auto;}
+
+.login { border: 1px solid black; padding: 10px; }
 /* Estilo de la "Publicación de trabajo" (Card) */
 .card {
     border: 3px solid black;
