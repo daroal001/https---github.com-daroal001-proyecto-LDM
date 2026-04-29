@@ -1,174 +1,91 @@
-
-/* login */
-form {
-    display: flex;
-    flex-direction: column; /* Apila los grupos de campos verticalmente */
-    max-width: 500px;
-    margin: 20px auto; /* Centra el formulario en la página */
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #476bcc;
-}
-
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, 
-input[type="number"], 
-input[type="email"], 
-input[type="password"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid black;
-    border-radius: 4px;
-    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
-}
-button {
-    border: 2px solid black;
-    padding: 10px 15px;
-    background-color: #26b1df;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #10509a;
-}
-
-.form-login-container {
-    background-color: #476bcc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%; /* Ocupa toda la altura de la ventana */
-    width: 100%; /* Ocupa toda la anchura de la ventana */
-}
-
-.main { 
-    grid-area: main; 
-    background-color: #476bcc; 
-    padding: 40px; 
-}
-
-.logo, .login { border: 1px solid black; padding: 10px; }
-/* Estilo de la "Publicación de trabajo" (Card) */
-.card {
-    border: 3px solid black;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #307acf;
-}
-.btn-contact {
-    border: 2px solid black;
-    padding: 10px 20px;
-    background: transparent;
-    cursor: pointer;
-    font-weight: bold;
-}
-
+/* --- RESET Y BASES --- */
 * { 
     box-sizing: border-box; 
     margin: 0; 
     padding: 0; 
-    font-family: Arial, sans-serif; 
+    font-family: 'Segoe UI', Arial, sans-serif; 
 }
 
 body { 
-    margin: 0;
-    background-color: #f3f4f6; /* Gris muy claro, previene parpadeos de color */
-    color: #111827; /* Gris muy oscuro para los textos generales */
+    background-color: #f3f4f6; 
+    color: #111827; 
 }
 
-/* --- ESTRUCTURA GRID --- */
+/* --- ESTRUCTURA GRID PRINCIPAL --- */
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 250px 1fr;
-    /* Cambiamos el 200px por 150px al final de esta línea: */
-    grid-template-rows: 80px 1fr 150px; 
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 80px 1fr 160px; 
     grid-template-areas: 
         "header header"
         "sidebar main"
         "footer footer";
+    gap: 15px; /* Crea espacio entre las columnas y filas automáticamente */
 }
-/* --- COLORES Y ÁREAS (Estilo Clásico Profesional) --- */
+
+/* --- HEADER --- */
 .header { 
     grid-area: header; 
-    background-color: #476bcc; /* Azul marino */
-    color: #ffffff; /* Texto blanco */
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: #ffffff; 
     display: flex; 
     justify-content: space-between;
     align-items: center; 
-    padding: 0 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra suave debajo del header */
-    z-index: 10; /* Asegura que la sombra se vea sobre el main */
+    padding: 0 40px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
 }
 
-.sidebar { 
-    grid-area: sidebar; 
-    background-color: #1e3a8a; /* Azul marino */
-    color: #ffffff;
-    padding: 20px; 
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra a la derecha y abajo */
-    z-index: 5; /* Obliga a la sombra a proyectarse POR ENCIMA del footer y el main */
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.main { 
-    grid-area: main; 
-    background-color: #f3f4f6; /* Gris muy claro para que destaquen las cards */
-    padding: 40px; 
+.logo {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
 }
 
-.footer { 
-    grid-area: footer; 
-    background-color: #1e3a8a; /* Azul marino */
-    color: #ffffff;
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center; 
-    padding: 10px 20px; 
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Una línea blanca casi transparente para marcar el límite */
-}
-/* Botón Login adaptado (Borde blanco, fondo transparente) */
+.logo:hover { transform: scale(1.05); }
+
+/* Botón Login tipo "píldora" */
 .login { 
-    border: 2px solid #ffffff; 
-    background-color: transparent; 
-    padding: 8px 20px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px; 
-    transition: all 0.3s ease; 
+    border: 1.5px solid rgba(255, 255, 255, 0.7); 
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 10px 25px; 
+    border-radius: 50px; 
+    transition: all 0.3s ease;
 }
 
 .login a {
     color: #ffffff; 
     text-decoration: none; 
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    font-size: 14px;
 }
 
-/* Efecto hover: se vuelve blanco con texto azul */
 .login:hover {
     background-color: #ffffff; 
-    cursor: pointer;
-}
-.login:hover a {
-    color: #1e3a8a; 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* --- ELEMENTOS DEL SIDEBAR --- */
+.login:hover a { color: #1e3a8a; }
+
+/* --- SIDEBAR --- */
+.sidebar { 
+    grid-area: sidebar; 
+    background-color: #1e3a8a; 
+    color: #ffffff;
+    padding: 30px 20px; 
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
 .sidebar h3 {
     margin-bottom: 20px;
     font-size: 18px;
@@ -176,57 +93,107 @@ body {
     padding-bottom: 10px;
 }
 
-.sidebar ul {
-    list-style-type: none; /* Quita los puntos de la lista */
-}
+.sidebar ul { list-style: none; }
 
 .sidebar li {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil para cada filtro */
-    border-radius: 4px;
+    margin-bottom: 12px;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.08); 
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background 0.3s;
 }
 
-.sidebar li:hover {
-    background-color: rgba(255, 255, 255, 0.15); /* Se ilumina al pasar el ratón */
+.sidebar li:hover { background-color: rgba(255, 255, 255, 0.2); }
+
+/* --- ÁREA PRINCIPAL (MAIN) --- */
+.main { 
+    grid-area: main; 
+    background-color: #f3f4f6; 
+    padding: 30px 40px; 
+    overflow-y: auto;
 }
 
-/* --- ELEMENTOS DEL MAIN (Cards de Empleo) --- */
+/* --- TARJETAS DE EMPLEO (CARDS) --- */
 .card {
-    background-color: #ffffff; /* Tarjeta blanca */
-    color: #111827; /* Texto oscuro */
-    padding: 20px 30px;
+    background-color: #ffffff;
+    padding: 25px 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra elegante, sin borde negro */
-    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px; /* Despega una tarjeta de la otra */
 }
 
-/* Botón de la tarjeta */
 .btn-contact {
     border: none;
-    padding: 10px 20px;
-    background-color: #1e3a8a; /* Botón azul a juego con el diseño */
+    padding: 12px 25px;
+    background-color: #1e3a8a;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
 
-.btn-contact:hover {
-    background-color: #152b66; /* Azul un poco más oscuro al pasar el ratón */
+.btn-contact:hover { background-color: #3b82f6; }
+
+/* --- FORMULARIO DE LOGIN --- */
+.form-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
 }
 
-/* --- ELEMENTOS DEL FOOTER --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio uniforme entre campos */
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: #1e3a8a;
+    font-size: 0.9rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* --- FOOTER --- */
+.footer { 
+    grid-area: footer; 
+    background-color: #1e3a8a; 
+    color: #ffffff;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 20px; 
+}
+
 .map-container iframe {
     border: none;
-    border-radius: 8px; /* Mapa con bordes redondeados */
-    width: 300px;
-    height: 100px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para que resalte sobre el azul */
+    border-radius: 12px;
+    width: 320px;
+    height: 110px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
