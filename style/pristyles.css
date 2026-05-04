@@ -1,0 +1,334 @@
+
+/* login */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif; 
+}
+
+.login { 
+    border: 2px solid #ffffff; 
+    background-color: transparent; 
+    padding: 8px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+}
+
+.login a {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover: se vuelve blanco con texto azul */
+.login:hover {
+    background-color: #ffffff; 
+    cursor: pointer;
+}
+.login:hover a {
+    color: #1e3a8a; 
+}
+/* centrar el título del login en el nav */
+.login-nav-title {
+    color: #ffffff; 
+    font-size: 24px; 
+    font-weight: bold; 
+    text-align: center; 
+    flex-grow: 1; /* Esto hace que el título ocupe todo el espacio disponible */ 
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Apila los grupos de campos verticalmente */
+    max-width: 500px;
+    margin: 20px auto; /* Centra el formulario en la página */
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #476bcc;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, 
+input[type="number"], 
+input[type="email"], 
+input[type="password"],
+input[type="tel"],
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+
+button {
+    border: 2px solid black;
+    padding: 10px 15px;
+    background-color: #26b1df;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #10509a;
+}
+
+.form-login-container {
+    background-color: #476bcc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 100%; /* Ocupa toda la anchura de la ventana */
+}
+
+.main { 
+    grid-area: main; 
+    background-color: #476bcc; 
+    padding: 40px; 
+}
+
+.logo { height: 50px; width: auto;}
+
+.login { border: 1px solid black; padding: 10px; }
+/* Estilo de la "Publicación de trabajo" (Card) */
+.card {
+    border: 3px solid rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #307acf;
+}
+
+.btn-contact {
+    border: 2px solid black;
+    padding: 10px 20px;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+body { 
+    margin: 0;
+    background-color: #3f67b7; /* Azul de fondo para toda la página */
+    color: #111827; /* Gris muy oscuro para los textos generales */
+}
+
+/* --- ESTRUCTURA GRID PRINCIPAL --- */
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 260px 1fr;
+    /* Cambiamos 160px por auto o un valor menor como 100px */
+    grid-template-rows: 80px 1fr auto; 
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 3px;
+}
+
+/* --- HEADER --- */
+.header { 
+    grid-area: header; 
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: #ffffff; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 40px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.footer { 
+    grid-area: footer; 
+    background-color: #1e3a8a; /* Azul marino */
+    color: #ffffff;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 10px 20px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Una línea blanca casi transparente para marcar el límite */
+}
+/* Botón Login adaptado (Borde blanco, fondo transparente) */
+.login { 
+    border: 1.5px solid rgba(255, 255, 255, 0.7); 
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 10px 25px; 
+    border-radius: 50px; 
+    transition: all 0.3s ease;
+}
+
+/* --- SIDEBAR --- */
+.sidebar { 
+    grid-area: sidebar; 
+    background-color: #1e3a8a; 
+    color: #ffffff;
+    padding: 30px 20px; 
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+}
+
+.sidebar ul { list-style: none; }
+
+.sidebar li {
+    margin-bottom: 12px;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.08); 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar li:hover { background-color: rgba(255, 255, 255, 0.2); }
+
+/* --- ÁREA PRINCIPAL (MAIN) --- */
+.main { 
+    grid-area: main; 
+    background-color: #f3f4f6; 
+    padding: 30px 40px; 
+    overflow-y: auto;
+}
+
+/* --- TARJETAS DE EMPLEO (CARDS) --- */
+.card {
+    background-color: #ffffff;
+    padding: 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px; /* Despega una tarjeta de la otra */
+}
+
+.btn-contact {
+    border: none;
+    padding: 12px 25px;
+    background-color: #1e3a8a;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-contact:hover { background-color: #3b82f6; }
+
+/* --- FORMULARIO DE LOGIN --- */
+.form-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio uniforme entre campos */
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: #1e3a8a;
+    font-size: 0.9rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* --- FOOTER --- */
+.footer { 
+    grid-area: footer; 
+    background-color: #1e3a8a; 
+    color: #ffffff;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    /* Reducimos el primer valor (arriba/abajo) a 5px */
+    padding: 5px 10px; 
+}
+
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+footer li{
+    padding: 10px 16px;
+    color: rgb(255, 255, 255);
+}
+
+footer li a{
+    display: flex;
+    padding: 0px;
+    color: rgb(255, 255, 255);
+    padding: 10px 16px;
+    gap: 10px;
+    text-decoration: none;
+}
+
+footer li a:hover{
+    padding: 0px;
+    color: #b1b1b1;
+    padding: 10px 16px;
+}
+
+.map-container iframe {
+    border: none;
+    border-radius: 12px;
+    width: 320px;
+    height: 80px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
