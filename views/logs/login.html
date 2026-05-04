@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicia Sesión - brillilink</title>
+    <!-- Ruta corregida: subir dos niveles para llegar a 'style' -->
+    <link rel="stylesheet" href="../../style/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <!-- Ruta corregida: subir dos niveles para llegar a la raíz donde está el logo -->
+            <img src="../../logo.png" alt="logo" class="logo">
+            <nav class="nav-title">brillilink</nav>
+            <div class="auth-container">
+                <!-- Se mantiene igual por estar en la misma carpeta 'logs' -->
+                <div class="login"><a href="logon.html">Log on</a></div>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <h3>Bienvenida</h3>
+            <ul>
+                <!-- Ruta corregida: subir un nivel a 'views' y entrar en 'main' -->
+                <li><a href="../main/principal_ing.html" style="color: white; text-decoration: none;">⬅ Volver al inicio</a></li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <!-- Acción corregida: subir un nivel y entrar en 'main' -->
+            <form action="../main/principal_log.html" method="GET">
+                <h2 style="color: #1e3a8a; text-align: center; margin-bottom: 20px;">Acceso Usuaria</h2>
+                
+                <label for="usuario">Correo o Usuario:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Introduce tu correo" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Tu contraseña" required>
+
+                <button type="submit" class="btn-contact" style="width: 100%; margin-top: 20px;">
+                    Entrar
+                </button>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-info">
+                <p><strong>Nuestra Oficina</strong></p>
+                <p>Catarroja, España</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.954191859724!2d-0.417597815673236!3d39.40254239844637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604e82a8672a35%3A0xed578f5f80fed685!2sFlorida%20Universit%C3%A0ria!5e0!3m2!1ses!2ses!4v1776841605472!5m2!1ses!2ses" 
+                    width="320" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

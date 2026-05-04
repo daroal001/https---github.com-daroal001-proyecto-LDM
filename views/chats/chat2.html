@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Recados - brillilink</title>
+    <link rel="stylesheet" href="../../style/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="../../logo.png" alt="logo" class="logo">
+            <nav class="nav-title">brillilink</nav>
+            <div class="auth-container">
+                <div class="login"><a href="../main/principal_log.html">Mi Panel</a></div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <h3>Mensajes</h3>
+            <ul>
+                <li onclick="window.location.href='chat.html'">Ana (Limpieza)</li>
+                <li onclick="window.location.href='chat1.html'">Familia García</li>
+                <li style="background: rgba(255,255,255,0.2)">Sr. Pedro</li>
+                <li onclick="window.location.href='../main/principal_log.html'" style="margin-top: 20px;">⬅ Volver</li>
+            </ul>
+        </aside>
+        <main class="main">
+            <div class="chat-window">
+                <div class="chat-header">Conversación: Recados a domicilio</div>
+                <div class="chat-messages">
+                    <div class="message received">¿Podrías pasar también por la farmacia antes de venir?</div>
+                    <div class="message sent">Sin problema, Pedro. Pásame la lista y lo recojo todo.</div>
+                    <div class="message received">Te la envío ahora mismo. Muchas gracias por la ayuda.</div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" placeholder="Escribe al Sr. Pedro...">
+                    <button class="btn-contact">Enviar</button>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-info"><p>Florida, España</p></div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?..." width="320" height="80" style="border:0;" loading="lazy"></iframe>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
