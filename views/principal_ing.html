@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Página de Empleos</title>
-    <link rel="stylesheet" href="../style/pristyles.css">
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
 
     <div class="container">
         <header class="header">
             <img src="logo.png" alt="logo" class="logo">
-            <nav class="nav-title">brillilink</nav>
-            <div class="login">
-                <a href="login.html">Login</a>
-            </div> </header>
+                <nav class="nav-title">brillilink</nav>
+                
+                <!-- Contenedor para agrupar ambos botones -->
+                <div class="auth-container">
+                    <div class="login">
+                        <a href="login.html">Log in</a>
+                    </div>
+                    <div class="login">
+                        <a href="logon.html">Log on</a>
+                    </div>
+                </div>
+    </header>
 
         <aside class="sidebar">
-            <h3>search filters</h3>
             <ul>
-                <li>Categoría</li>
-                <li>Ubicación</li>
-                <li>Salario</li>
+                <aside class="sidebar">
+                    <h3>Funciones</h3>
+                    <ul>
+                        <li>Categoría</li>
+                        <li onclick="window.open('https://www.google.com/maps/place/Florida+Universit%C3%A0ria/@39.4025424,-0.4175978,17z/data=!4m6!3m5!1s0xd604e82a8672a35:0xed578f5f80fed685!8m2!3d39.4025425!4d-0.4127269!16s%2Fg%2F11c61q4fry?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D')">
+                            Ubicación
+                        </li>
+                        <li>Salario</li>
+                    </ul>
+                </aside>                
             </ul>
         </aside>
 
