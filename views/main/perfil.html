@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Perfil - brillilink</title>
+    <link rel="stylesheet" href="../../style/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="../../logo.png" alt="logo" class="logo">
+            <nav class="nav-title">brillink</nav>
+            <div class="auth-container">
+                <span style="color: #ffffff; font-weight: bold; margin-right: 10px;">¡Hola, Belén!</span>
+                <div class="login"><a href="principal_ing.html">Cerrar Sesión</a></div>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <h3>Mi Cuenta</h3>
+            <ul>
+                <li style="background: rgba(255,255,255,0.2)">Mi Perfil</li>
+                <li onclick="window.location.href='../chats/chat.html'">Mis Mensajes</li>
+                <li onclick="window.location.href='principal_log.html'" style="margin-top: 20px;">⬅ Volver al Panel</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-avatar">B</div>
+                    <div>
+                        <h2 style="color: #1e3a8a;">Belén García</h2>
+                        <p style="color: #6b7280;">Usuaria desde mayo 2026</p>
+                    </div>
+                </div>
+
+                <form action="principal_log.html" method="GET">
+                    <div class="profile-info-grid">
+                        <div class="form">
+                            <label>Nombre:</label>
+                            <input type="text" value="Belén" required>
+                        </div>
+                        <div class="form">
+                            <label>Apellidos:</label>
+                            <input type="text" value="García Pérez" required>
+                        </div>
+                        <div class="form">
+                            <label>Correo:</label>
+                            <input type="email" value="belen@correo.com" required>
+                        </div>
+                    
+                        <div class="form" style="grid-column: span 2;">
+                            <label>Ubicación:</label>
+                            <input type="text" value="Catarroja, Valencia">
+                        </div>
+                        <div class="form" style="grid-column: span 2;">
+                            <label>Sobre mí:</label>
+                            <textarea rows="3">Ama de casa con amplia experiencia en organización del hogar y cuidado de niños. Busco ayudar a familias de la zona.</textarea>
+                        </div>
+                    </div>
+
+                    <div class="profile-actions">
+                        <button type="submit" class="btn-contact" style="flex: 1;">Guardar Cambios</button>
+                        <button type="button" class="btn-contact" style="flex: 1; background: #6b7280;" onclick="window.location.href='principal_log.html'">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-info">
+                <p><strong>Nuestra Oficina</strong></p>
+                <p>Florida, España</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.954191859724!2d-0.417597815673236!3d39.40254239844637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604e82a8672a35%3A0xed578f5f80fed685!2sFlorida%20Universit%C3%A0ria!5e0!3m2!1ses!2ses!4v1776841605472!5m2!1ses!2ses" width="320" height="80" style="border:0;" loading="lazy"></iframe>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
